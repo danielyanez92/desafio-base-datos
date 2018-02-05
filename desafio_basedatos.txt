@@ -1,0 +1,37 @@
+danielyanez=# CREATE DATABASE movies;
+CREATE DATABASE
+danielyanez=# \c movies
+You are now connected to database "movies" as user "danielyanez".
+movies=# 
+movies=# CREATE TABLE movie(
+movies(# id SERIAL,
+movies(# name varchar(50)
+movies(# );
+CREATE TABLE
+movies=# INSERT INTO movie (name) VALUES ('El rey leon');
+INSERT 0 1
+movies=# INSERT INTO movie (name) VALUES ('terminator II');
+INSERT 0 1
+movies=# 
+movies=# ALTER TABLE movie ADD COLUMN año integer;
+ALTER TABLE
+movies=# 
+movies=# ALTER TABLE movie ADD COLUMN año integer;
+ALTER TABLE
+movies=# ALTER TABLE movie ADD COLUMN genero varchar(50);
+ALTER TABLE
+movies=# UPDATE movies SET año=1984;
+ERROR:  relation "movies" does not exist
+LINE 1: UPDATE movies SET año=1984;
+               ^
+movies=# UPDATE movie SET año=1984;
+UPDATE 2
+movies=# UPDATE movie SET genero='Drama';
+UPDATE 2
+movies=# DELETE FROM movie WHERE name='terminator II';
+DELETE 1
+movies=# INSERT INTO movie (name) VALUES ('El Crimen Perfecto');
+INSERT 0 1
+
+
+
